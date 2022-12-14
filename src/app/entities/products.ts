@@ -1,8 +1,11 @@
+import { Description } from "./description"
+
 export interface ProductsProps {
   code_bar: string
-  description: string
+  description: Description
   price: number
   quantity: number
+  created_at: Date
 }
 
 export class Products {
@@ -16,11 +19,11 @@ export class Products {
     return this.props.code_bar
   }
 
-  public set description(value: string) {
+  public set description(value: Description) {
     this.props.description = value;
   }
 
-  public get description(): string {
+  public get description(): Description {
     return this.props.description
   }
 
@@ -38,5 +41,13 @@ export class Products {
 
   public get quantity(): number {
     return this.props.quantity
+  }  
+  
+  public set created_at(value: Date) {
+    this.props.created_at = value;
+  }
+
+  public get created_at(): Date {
+    return this.props.created_at
   }  
 }
