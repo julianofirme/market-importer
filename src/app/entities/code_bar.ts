@@ -11,7 +11,7 @@ export class CodeBar {
 
   constructor(code_bar: string) {
     const isCodeBarLengthValid = validateLength({ 
-      value: this.code_bar, 
+      value: code_bar, 
       min_length: this.MIN_CODE_BAR_LENGTH, 
       max_length: this.MAX_CODE_BAR_LENGTH 
     });
