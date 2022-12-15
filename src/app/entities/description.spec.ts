@@ -7,4 +7,12 @@ describe('Description', () => {
 
     expect(description).toBeTruthy();
   })
+
+  it('should not be able to create a product description with less then 3 characters', () => {
+    expect(() => new Description('A')).toThrow();
+  })
+
+  it('should not be able to create a product description with more then 1024 characters', () => {
+    expect(() => new Description('A'.repeat(1025))).toThrow();
+  })
 })
