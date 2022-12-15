@@ -11,6 +11,10 @@ export interface ProductsProps {
 
 export class Products {
   private _props: ProductsProps;
+  
+  constructor(props: ProductsProps) {
+    this._props = props;
+  }
 
   public set code_bar(value: CodeBar) {
     this._props.code_bar = value;
