@@ -1,7 +1,8 @@
+import { CodeBar } from './code_bar';
 import { Description } from "./description"
 
 export interface ProductsProps {
-  code_bar: string
+  code_bar: CodeBar
   description: Description
   price: number
   quantity: number
@@ -11,11 +12,11 @@ export interface ProductsProps {
 export class Products {
   private _props: ProductsProps;
 
-  public set code_bar(value: string) {
+  public set code_bar(value: CodeBar) {
     this._props.code_bar = value;
   }
 
-  public get code_bar(): string {
+  public get code_bar(): CodeBar {
     return this._props.code_bar
   }
 
