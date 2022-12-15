@@ -9,13 +9,9 @@ export class Description {
     return this.description;
   }
 
-  private validateDescriptionLength(value: string): boolean {
-    return value.length <= this.MAX_DESCRIPTION_LENGTH;
-  }
-
   constructor(description: string) {
     const isDescriptionLengthValid = validateLength({ 
-      value: this.description, 
+      value: description, 
       min_length: this.MIN_DESCRIPTION_LENGTH, 
       max_length: this.MAX_DESCRIPTION_LENGTH 
     });
